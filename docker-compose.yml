@@ -9,6 +9,6 @@ services:
     env_file:
       - .env
     networks:
-      - postgres_shared
+      - shared_pg_network
       # - order_net
     restart: unless-stopped
