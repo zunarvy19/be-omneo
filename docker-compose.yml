@@ -12,3 +12,7 @@ services:
       - shared_pg_network
       # - order_net
     restart: unless-stopped
+
+networks:
+  shared_pg_network:
+    external: true
