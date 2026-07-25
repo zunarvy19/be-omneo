@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  be:
+    build: .
+    container_name: order_management_be
+    ports:
+      - "5001:3000"
+    env_file:
+      - .env
+    networks:
+      - postgres_shared
+      # - order_net
+    restart: unless-stopped
